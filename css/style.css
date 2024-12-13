@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.spinner-wrapper{
+    background-color: #272A37;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.wrapper{
+    background: #484b56;
+    padding: 0px 20px 0px 20px;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.side-image{
+    background-image: url("https://thumbs.dreamstime.com/b/physics-16372359.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+.row{
+    width: 900px;
+    height: 550px;
+    border-radius: 10px;
+    background-color: #272A37;
+    box-shadow: 10px 10px 15px 2px rgba(0, 0, 0, 0.2);
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.input-box{
+    width: 330px;
+    box-sizing: border-box;
+}
+.input-box header{
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 30px;
+
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.input{
+    height: 45px;
+    width: 100%;
+    background-color: #323644;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    padding: 10px;
+}
+.input-field-checkbox{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 0 23% 0 ;
+    gap: 10px;
+}
+.submit{
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #1D90F5;
+    border-radius: 5px;
+}
+.singin{
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 768px){
+    .input-box header{
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 20px;
+    
+    }
+    .side-image{
+        border-radius: 10px 10px 0 0;
+    }
+    img{
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+    .text{
+        position: absolute;
+        top: 70%;
+        text-align: center;
+    }
+    .text p, i{
+        font-size: 16px;
+    }
+    .row{
+        max-width:420px;
+        width: 100%;
+    }
+}
