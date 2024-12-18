@@ -1,0 +1,197 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body {
+    background-color: #272A37;
+    background-image: url("https://4kwallpapers.com/images/walls/thumbs_2t/19801.jpg");
+    color: white;
+    background-repeat:no-repeat;
+background-position: center center;
+background-size: 00% ;
+  font-family: Poppins, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #484b56;
+  padding: 0 30px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.nav-link {
+  margin: 0 15px;
+  color: #999;
+  transition: color 1s;
+}
+
+.nav-link:hover {
+  color: #121212;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 960px;
+  margin: 50px auto;
+}
+
+.section1 {
+    color: white;
+  width: 100%;
+  margin-top: 250px;
+  display: flex;
+}
+
+.section1 .text1 {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  color: white;
+}
+
+.section1 h1 {
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1.5em;
+}
+
+.section1 p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin-top: 0;
+  padding-right: 40px;
+}
+
+.section1 img {
+  width: 45%;
+  margin-left: 0;
+}
+
+.center-align {
+  padding-top: 150px;
+  text-align: center;
+  display: block;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin: 10px 30px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px #ccc;
+  width: 240px;
+  text-align: center;
+}
+
+.card h3 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.card a {
+  background-color: yellow;
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
+  max-width: 100%;
+}
+
+.card a:hover {
+  opacity: 0.8;
+}
+
+#footer {
+  padding: 20px;
+  display: flex;
+}
+
+.foot1 {
+  flex: 1;
+}
+
+.foot2 {
+  flex: 1;
+  text-align: right;
+}
+
+</style>
+<head>
+
+    <title>EduQuest</title>
+</head>
+
+<body>
+    <header id="header">
+      <div id="header-img">
+        <p class="logo">EduQuest</p>
+      </div>
+      <nav id="nav-bar">
+        <a class="nav-link" href="">Home</a>
+        <a class="nav-link" href="./user/browse.html">Courses</a>
+        <a class="nav-link" href="login.html">Login</a>
+        <a class="nav-link" href="signup.html">SignUp</a>
+      </nav>
+    </header>
+  
+    <main class="container" style="background-color: #272A37;">
+  
+      <div class="section1">
+        <div class="text1">
+          <h1>EduQuest - A Smart learning platform</h1>
+          <p>Empowering minds with personalized, engaging, and future-ready learning experiences.</p>
+        </div>
+        <img src="img/img.svg">
+      </div>
+  
+      <section id="steps">
+        <h2 class="center-align">Our Features</h2>
+        <div class="steps">
+          <article class="card">
+            <h3>Personalized Learning Experience</h3>
+            <p>EduQuest adapts to each student's unique learning style, offering tailored courses and resources that ensure maximum engagement and knowledge retention.</p>
+          </article>
+  
+          <article class="card">
+            <h3>Engaging & Interactive Content</h3>
+            <p>With multimedia-rich content, including videos, quizzes, and simulations, EduQuest makes learning enjoyable and interactive, ensuring students stay motivated and actively involved.</p>
+          </article>
+  
+          <article class="card">
+            <h3>Flexible Learning on Any Device</h3>
+            <p>Access EduQuest’s comprehensive library of courses and resources anytime, anywhere, from any device. Learn at your own pace, whether at home, school, or on the go.
+
+            </p>
+          </article>
+        </div>
+      </section>
+  
+    </main>
+    <footer id="footer">
+     
+    </footer>
+  </body>
+  
+  </html>

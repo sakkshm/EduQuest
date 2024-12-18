@@ -18,12 +18,11 @@ const app = initializeApp(firebaseConfig);
 //Initializing Database
 const database = getDatabase(app);
 
-//Initializing auth
-//const auth = getAuth(app);
 
 //Event Listeners
 window.onload = loadUserData;
 document.getElementById("logOutButton").addEventListener("click", signOutUser);
+document.getElementById("submit").addEventListener("click", submitCourse);
 
 function putLoadingScreen(){
   //Put loading screen
@@ -64,15 +63,80 @@ function loadUserData(){
       alert("No Login Found!!!");
       window.location.href = "login.html";
     }
-
-    //Set Values
-    document.getElementById("name").innerHTML += nameVal;
-    document.getElementById("email").innerHTML += emailVal;
-    document.getElementById("uid").innerHTML += uid;
-    document.getElementById("isTeacher").innerHTML += isTeacherVal;
+    if(isTeacherVal == false){
+      alert("Only teachers can make a course!!!");
+      window.location.href = "../dashboard.html";
+    }
 
     removeLoadingScreen();
+
+    return [nameVal, uid];
     
+}
+
+function makeid(length) {
+  let result = '';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length;
+  let counter = 0;
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    counter += 1;
+  }
+  return result;
+}
+
+function submitCourse(){
+  var a = loadUserData();
+  putLoadingScreen();
+  //alert("ASfasd");
+  var titleVal = document.getElementById("title").value;
+  var descVal = document.getElementById("description").value;
+  var imgVal = document.getElementById("image").value;
+  var videosVal = document.getElementById('videos').value; 
+  var id = makeid(5);
+
+
+  if(titleVal == ''){
+    alert("Title cannot be empty");
+    removeLoadingScreen();
+    return;
+  }
+  if(descVal == ''){
+    alert("Description cannot be empty");
+    removeLoadingScreen();
+    return;
+  }
+  if(imgVal == ''){
+    alert("Thumbnail cannot be empty");
+    removeLoadingScreen();
+    return;
+  }
+  if(videosVal == ''){
+    alert("Videos cannot be empty");
+    removeLoadingScreen();
+    return;
+  }
+
+  videosVal = videosVal.replaceAll(' ','').split(",")
+
+  //alert("dfbsd");
+
+  set(ref(database, 'courses/' + id), {
+    title: titleVal,
+    desc: descVal,
+    img: imgVal,
+    videos : videosVal,
+    creator : a[0],
+    uid : a[1] 
+  }).then(() => {
+    // DOne
+    alert('Course Created!!')
+    removeLoadingScreen();
+    window.location.href = "./dashboard.html";
+  }).catch((error) => {
+    alert(error);
+  })
 }
 
 

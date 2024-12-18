@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - EduQuest</title>
+    <title>Create Courses - EduQuest</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -32,15 +32,9 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="browse.html" class="sidebar-link">
+                    <a href="#" class="sidebar-link">
                         <i class="lni lni-agenda"></i>
                         <span>Courses</span>
-                    </a>
-                </li>
-                <li class="sidebar-item" id="sidebar-item-locked">
-                    <a href="create_course.html" class="sidebar-link">
-                        <i class="lni lni-pencil"></i>
-                        <span>Create Courses</span>
                     </a>
                 </li>
                 
@@ -50,9 +44,9 @@
                         <span>Settings</span>
                     </a>
                 </li>
-
             </ul>
             <div class="sidebar-footer">
+
                 <a href="#" class="sidebar-link" id="logOutButton">
                     <i class="lni lni-exit" ></i>
                     <span>Logout</span>
@@ -60,35 +54,32 @@
             </div>
         </aside>
         <div class="main">
-            <nav class="navbar navbar-expand px-4 py-3">
-                <h3 class="fw-bold fs-4 mb-3" style="padding-top: 10px;">User Dashboard</h3>
+            <nav class="navbar navbar-expand px-4 py-3" style="height: 60px;">
+                <h3 class="fw-bold fs-4 mb-3" style="padding-top: 10px;">Create Courses</h3>
             </nav>
             <main class="content px-3 py-4">
                 <div class="container-fluid">
                     <div class="mb-3">
                         
-                        <div class="row">
-                            <div class="col-12 col-md-8 " style="height: 200px;">
-                                <div class="card border-0">
-                                    <div class="card-body py-4">
-                                        <h4 class="mb-2 fw-bold" id="name">
-                                            Name: 
-                                        </h4>
-                                        <p class="mb-2 fw-bold" id="uid">
-                                            UID: 
-                                        </p>
-                                        <span class=" text-success me-3" id="email">
-                                            E Mail: 
-                                        </span>
-                                        <span class="fw-bold" id="isTeacher">
-                                            isTeacher: 
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+                       
                             
-                        <div class="row">
-                            
+                        <div class="row" style="padding: 20px;">
+                            <h1 style="padding: 20px; align-self: center;">Create a Courses</h1>
+                            <h3 style="margin-top: 50px;">Title</h3>
+                            <input type="text" id="title" style="width: 70%; height: 50px;">
+                            <br/>
+                            <h3 style="margin-top: 50px;">Description</h3>
+                            <input type="text" id="description" style="width: 70%; height: 50px;">
+                            <br/>
+                            <h3 style="margin-top: 50px;">Thumbnail</h3>
+                            <input type="text" id="image" style="width: 70%; height: 50px;">
+
+                            <br/>
+                            <h3 style="margin-top: 50px;">Videos (Comma separated)</h3>
+                            <input type="text" id="videos" style="width: 70%; height: 50px;">
+
+                            <h3></h3>
+                            <input type="button" id="submit" value="Submit" style="height: 50px; width: 100px; margin-top: 50px;">
                         </div>
                     </div>
                 </div>
@@ -128,7 +119,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <script type="module" src="../js/dashboard.js"></script>
+    <script type="module" src="../js/create_course.js"></script>
     <script type="text/javascript">
         const hamBurger = document.querySelector(".toggle-btn");
 
